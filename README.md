@@ -3,7 +3,7 @@
 **Full-Stack Developer** | Java · Spring Boot · TypeScript · React · Node.js
 
 📍 Jülich, NRW, Germany · 🎓 B.Eng Computer Engineering  
-💼 Open to **Junior Full-Stack / Web Developer** roles in NRW (Köln, Aachen, Düsseldorf)  
+💼 Open to **Junior Full-Stack / Web Developer** 
 🚀 Available immediately — already in Germany, no visa sponsorship needed
 
 ---
