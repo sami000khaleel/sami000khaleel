@@ -90,7 +90,7 @@ REST API for a social platform with users, posts, comments, groups, and content 
 ## 📫 Contact Me
 
 - 📧 Email: [sami000khaleel@gmail.com](mailto:sami000khaleel@gmail.com)
-- 💼 LinkedIn: [ADD YOUR LINKEDIN URL]
+- 💼 LinkedIn: ....
 - 🧠 Codewars: [sami000khaleel](https://www.codewars.com/users/sami000khaleel)
 - 📍 Location: Jülich, NRW, Germany
 
