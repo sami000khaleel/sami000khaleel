@@ -61,16 +61,6 @@ A MERN-stack app that helps tourists discover places in Syria using AI image sea
 
 ---
 
-
-
-## 📊 GitHub Stats
-
-![Sami's GitHub stats](https://github-readme-stats.vercel.app/api?username=sami000khaleel&show_icons=true&theme=default&hide_border=true)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=sami000khaleel&layout=compact&hide_border=true)
-
----
-
 ## 📫 Contact Me
 
 - 📧 Email: [sami000khaleel@gmail.com](mailto:sami000khaleel@gmail.com)
