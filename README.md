@@ -48,7 +48,7 @@ A web platform where teachers and students conduct live video sessions with real
 
 - **Features:** Peer-to-peer video calls, real-time chat, user auth, session management
 - **Stack:** `React` `Node.js` `WebRTC` `Socket.IO` `MongoDB`
-- 🔗 [Demo](https://onedrive.live.com/?qt=allmyphotos&photosData=%2Fshare%2FCA524006C0AC4FC8%21sba07ab39ff054fbe80ccbf94f38270bb%3Fithint%3Dvideo%26migratedtospo%3Dtrue&cid=CA524006C0AC4FC8&id=CA524006C0AC4FC8%21sba07ab39ff054fbe80ccbf94f38270bb&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3YvYy9jYTUyNDAwNmMwYWM0ZmM4L0VUbXJCN29GXzc1UGdNeV9sUE9DY0xzQmtPdWhTRFZVMG9rWFY4UndaUGc0dmc&v=photos)) · [Code](https://github.com/sami000khaleel/teach-me)
+- 🔗 [Demo](https://onedrive.live.com/?qt=allmyphotos&photosData=%2Fshare%2FCA524006C0AC4FC8%21sba07ab39ff054fbe80ccbf94f38270bb%3Fithint%3Dvideo%26migratedtospo%3Dtrue&cid=CA524006C0AC4FC8&id=CA524006C0AC4FC8%21sba07ab39ff054fbe80ccbf94f38270bb&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3YvYy9jYTUyNDAwNmMwYWM0ZmM4L0VUbXJCN29GXzc1UGdNeV9sUE9DY0xzQmtPdWhTRFZVMG9rWFY4UndaUGc0dmc&v=photos) · [Code](https://github.com/sami000khaleel/teach-me)
 
 ---
 
@@ -57,7 +57,7 @@ A MERN-stack app that helps tourists discover places in Syria using AI image sea
 
 - **Features:** Image-based place recognition (computer vision), location filter, user reviews
 - **Stack:** `MongoDB` `Express` `React` `Node.js` `Python (Flask)` `Computer Vision`
-- 🔗 [Demo](https://onedrive.live.com/?qt=allmyphotos&photosData=%2Fshare%2FCA524006C0AC4FC8%21s633ef9c6cbcb45d499fd12013e605811%3Fithint%3Dvideo%26migratedtospo%3Dtrue&cid=CA524006C0AC4FC8&id=CA524006C0AC4FC8%21s633ef9c6cbcb45d499fd12013e605811&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3YvYy9jYTUyNDAwNmMwYWM0ZmM4L0VjYjVQbVBMeTlSRm1mMFNBVDVnV0JFQjMyd3VtZFg2YV9hUEdJMUNlMy1qNXc&v=photos)) · [Code](https://github.com/sami000khaleel/2syria) · [Flask Server](https://github.com/sami000khaleel/2syria-flask-server)
+- 🔗 [Demo](https://onedrive.live.com/?qt=allmyphotos&photosData=%2Fshare%2FCA524006C0AC4FC8%21s633ef9c6cbcb45d499fd12013e605811%3Fithint%3Dvideo%26migratedtospo%3Dtrue&cid=CA524006C0AC4FC8&id=CA524006C0AC4FC8%21s633ef9c6cbcb45d499fd12013e605811&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3YvYy9jYTUyNDAwNmMwYWM0ZmM4L0VjYjVQbVBMeTlSRm1mMFNBVDVnV0JFQjMyd3VtZFg2YV9hUEdJMUNlMy1qNXc&v=photos) · [Code](https://github.com/sami000khaleel/2syria) · [Flask Server](https://github.com/sami000khaleel/2syria-flask-server)
 
 ---
 
