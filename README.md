@@ -3,7 +3,7 @@
 **Full-Stack Developer** | Java · Spring Boot · TypeScript · React · Node.js
 
 📍 Jülich, NRW, Germany · 🎓 B.Eng Computer Engineering  
-💼 Open to **Junior Full-Stack / Web Developer** 
+💼 Open to **Junior Full-Stack / Web Developer**  
 🚀 Available immediately — already in Germany, no visa sponsorship needed
 
 ---
@@ -58,6 +58,16 @@ A MERN-stack app that helps tourists discover places in Syria using AI image sea
 - **Features:** Image-based place recognition (computer vision), location filter, user reviews
 - **Stack:** `MongoDB` `Express` `React` `Node.js` `Python (Flask)` `Computer Vision`
 - 🔗 [Demo](https://onedrive.live.com/?qt=allmyphotos&photosData=%2Fshare%2FCA524006C0AC4FC8%21s633ef9c6cbcb45d499fd12013e605811%3Fithint%3Dvideo%26migratedtospo%3Dtrue&cid=CA524006C0AC4FC8&id=CA524006C0AC4FC8%21s633ef9c6cbcb45d499fd12013e605811&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3YvYy9jYTUyNDAwNmMwYWM0ZmM4L0VjYjVQbVBMeTlSRm1mMFNBVDVnV0JFQjMyd3VtZFg2YV9hUEdJMUNlMy1qNXc&v=photos) · [Code](https://github.com/sami000khaleel/2syria) · [Flask Server](https://github.com/sami000khaleel/2syria-flask-server)
+
+---
+
+### 🌐 [Social Media Platform — Backend API](https://github.com/sami000khaleel/social-media-backend)
+A production-style Node.js/Express REST API for a social media platform with posts, threaded comments, role-based communities, and a personalized recommendation engine.
+
+- **Features:** JWT auth, threaded comments, community roles (manager/admin/member), AI content classification, personalized feed via interest-scoring algorithm, cascading deletes, file uploads, notifications
+- **Stack:** `Node.js` `Express` `MongoDB` `Mongoose` `JWT` `bcrypt` `Multer` `Axios`
+- **Highlight:** Custom recommendation algorithm using time-decay, linear interpolation, and derivative-based probability distribution to compose a dynamic feed per user
+- 🔗 [Code](https://github.com/sami000khaleel/social-media-backend)
 
 ---
 
