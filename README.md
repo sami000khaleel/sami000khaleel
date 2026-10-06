@@ -61,13 +61,13 @@ A MERN-stack app that helps tourists discover places in Syria using AI image sea
 
 ---
 
-### 🌐 [Social Media Platform — Backend API](https://github.com/sami000khaleel/social-media-backend](https://github.com/sami000khaleel/social-media-application/tree/main/server)
+### 🌐 [Social Media Platform — Backend API]
 A production-style Node.js/Express REST API for a social media platform with posts, threaded comments, role-based communities, and a personalized recommendation engine.
 
 - **Features:** JWT auth, threaded comments, community roles (manager/admin/member), AI content classification, personalized feed via interest-scoring algorithm, cascading deletes, file uploads, notifications
 - **Stack:** `Node.js` `Express` `MongoDB` `Mongoose` `JWT` `bcrypt` `Multer` `Axios`
 - **Highlight:** Custom recommendation algorithm using time-decay, linear interpolation, and derivative-based probability distribution to compose a dynamic feed per user
-- 🔗 [Code](https://github.com/sami000khaleel/social-media-backend)
+- 🔗 [Code](https://github.com/sami000khaleel/social-media-application/tree/main/server)
 
 ---
 
