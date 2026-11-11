@@ -8,11 +8,6 @@
 💼 **Open to Junior Full-Stack / Web Developer roles**
 🚀 **Available immediately:** already in Germany, no visa sponsorship needed
 
-[**▶ TeachMe live demo**](https://teach-me-al46.onrender.com/home) &nbsp;·&nbsp;
-[**🧩 Chrome extension (live)**](https://chromewebstore.google.com/detail/learn-languages-youtube-d/icbikjpimmfhofelddlfabbhpaombepm) &nbsp;·&nbsp;
-[📧 Email](mailto:sami000khaleel@gmail.com) &nbsp;·&nbsp;
-[💼 LinkedIn](https://www.linkedin.com/in/YOUR-LINKEDIN)
-
 </div>
 
 ---
