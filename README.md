@@ -42,7 +42,7 @@ A teacher starts a live video lesson, students join from the browser, and the te
 - **Features:** peer-to-peer video (WebRTC), screen sharing, raise hand, chat, per-student mute / stop video / remove, attendance reports
 - **Engineering:** signaling over Socket.IO with JWT-checked handshake, ICE candidates queued until the remote description exists, live screen share via `replaceTrack`, moderation enforced on the server, private image storage on Cloudflare R2, one deployable service (Express serves the React build)
 - **Stack:** `React` `Vite` `Tailwind` `Node.js` `Express` `WebRTC` `Socket.IO` `MySQL` `MongoDB`
-- 🔗 [Live demo](https://teach-me-al46.onrender.com/home) · [Code](https://github.com/sami000khaleel/teach-me) · [Video walkthrough](https://onedrive.live.com/?qt=allmyphotos&photosData=%2Fshare%2FCA524006C0AC4FC8%21sba07ab39ff054fbe80ccbf94f38270bb%3Fithint%3Dvideo%26migratedtospo%3Dtrue&cid=CA524006C0AC4FC8&id=CA524006C0AC4FC8%21sba07ab39ff054fbe80ccbf94f38270bb&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3YvYy9jYTUyNDAwNmMwYWM0ZmM4L0VUbXJCN29GXzc1UGdNeV9sUE9DY0xzQmtPdWhTRFZVMG9rWFY4UndaUGc0dmc&v=photos)
+- 🔗 [Live demo](https://teach-me-al46.onrender.com/home) · [Code](https://github.com/sami000khaleel/teach-me) 
 
 ---
 
