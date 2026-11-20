@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="de" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sami Khaleel Portfolio</title>
+<meta name="description" content="Sami Khaleel, Webentwickler in Jülich (NRW), ab sofort verfügbar. Vier Projekte zum Ausprobieren: React, Node.js, WebRTC, Socket.IO.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sami Khaleel · Webentwickler">
+<meta property="og:description" content="Webentwickler in Jülich (NRW), ab sofort verfügbar. Vier Projekte zum Ausprobieren.">
+<meta property="og:url" content="https://sami000khaleel.github.io/">
+<meta property="og:image" content="https://sami000khaleel.github.io/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d2bd8'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3ESK%3C/text%3E%3C/svg%3E">
+<script>
+try {
+  var r = document.documentElement, m = localStorage.getItem('mode'), l = localStorage.getItem('lang'), h = location.hash;
+  if (m === 'dark') r.dataset.mode = 'dark';
+  r.lang = h === '#en' ? 'en' : h === '#de' ? 'de' : (l || 'de');
+} catch (e) {}
+</script>
+<style>
+/* VOICE calm, light and confident: a developer who ships, written for a busy German recruiter
+   IDEA a product shelf: every project is an open browser window, one click opens the real app
+   PICTURE three demo windows standing on a pale stage under the name; the facts card answers HR's questions beside the name
+   COLOUR white ground, ink #111318, ultramarine #1d2bd8 for actions and the closing contact card, green only for "available"
+   TYPE Inter Display bold for headings, Inter for text, self-hosted (no requests to Google)
+   LAYOUT laptop: name and pitch left, facts card right, shelf beneath; phone: name, pitch, buttons, facts, swipeable shelf */
+@font-face{font-family:Inter;src:url(assets/fonts/inter-400.woff) format("woff");font-weight:400;font-display:swap}
+@font-face{font-family:Inter;src:url(assets/fonts/inter-600.woff) format("woff");font-weight:600;font-display:swap}
+@font-face{font-family:"Inter Display";src:url(assets/fonts/interdisplay-700.woff) format("woff");font-weight:700;font-display:swap}
+:root{--bg:#ffffff;--ink:#111318;--muted:#545869;--line:#e3e6ef;--soft:#f5f6fb;--stage:#eef1ff;--card:#ffffff;--chip:#f1f3fa;--accent:#1d2bd8;--nav:#1d2bd8;--link:#1d2bd8;--ok:#15803d;--okbg:#e7f6ec;--shadow:0 22px 44px -24px rgba(20,28,90,.38);color-scheme:light}
+:root[data-mode=dark]{--bg:#0e1017;--ink:#eceef5;--muted:#a3a8bc;--line:#272b3c;--soft:#141722;--stage:#151a36;--card:#171a27;--chip:#1c2030;--nav:#18208f;--link:#a3acff;--ok:#4ade80;--okbg:#143021;--shadow:0 22px 44px -24px rgba(0,0,0,.8);color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.6 Inter,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
+html[lang=de] .en,html[lang=en] .de{display:none}
+a{color:var(--link)}
+img,video{max-width:100%;display:block}
+h1,h2,h3{font-family:"Inter Display",Inter,"Segoe UI",Roboto,Arial,sans-serif;font-weight:700;letter-spacing:-.025em;line-height:1.08;margin:0;text-wrap:balance}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding:clamp(40px,5vw,84px) max(5vw,16px)}
+.nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:18px;padding:12px max(5vw,16px);background:var(--nav);color:#fff;box-shadow:0 6px 18px -12px rgba(20,28,90,.6)}
+.nav .me{font-family:"Inter Display",Inter,sans-serif;font-weight:700;font-size:19px;color:#fff;text-decoration:none;margin-right:auto}
+.nav nav{display:flex;gap:22px}
+.nav nav a{color:#dfe3ff;text-decoration:none;font-weight:600;font-size:15px}
+.nav nav a:hover{color:#fff}
+.lang{display:flex;border:1px solid rgba(255,255,255,.45);border-radius:999px;overflow:hidden}
+.lang button,.mode{all:unset;cursor:pointer;font-size:14px;font-weight:600;color:#dfe3ff;text-align:center}
+.lang button{padding:7px 12px}
+.lang button[aria-pressed=true]{background:#fff;color:var(--nav)}
+.mode{width:40px;height:36px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.45);border-radius:999px}
+.nav button:focus-visible,.nav a:focus-visible{outline-color:#fff}
+.mode svg{width:18px;height:18px}
+:root[data-mode=dark] .sun,:root:not([data-mode=dark]) .moon{display:none}
+button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:8px}
+.hero .band{padding-bottom:0}
+.top{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:center}
+.avail{display:inline-flex;align-items:center;gap:8px;background:var(--okbg);color:var(--ok);border-radius:999px;padding:5px 14px 5px 12px;font-weight:600;font-size:14.5px}
+.avail::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.who{display:flex;gap:20px;align-items:center;margin-top:18px}
+.who img{width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:50% 30%;flex:none;box-shadow:0 0 0 4px var(--bg),0 0 0 6px var(--line)}
+.hero h1{font-size:clamp(40px,5.4vw,64px)}
+.role{font-size:clamp(17px,1.6vw,20px);color:var(--muted);margin:6px 0 0;font-weight:600}
+.lead{font-size:clamp(18px,1.6vw,20px);line-height:1.5;margin:24px 0 0;max-width:34em}
+.lead strong{font-weight:600}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 20px;border-radius:12px;font:600 16px/1 Inter,"Segoe UI",Roboto,Arial,sans-serif;text-decoration:none;transition:transform .15s,box-shadow .15s;cursor:pointer;border:0}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--accent);color:#fff;box-shadow:0 8px 20px -8px rgba(29,43,216,.6)}
+.btn.s{background:var(--card);color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn.s:hover{box-shadow:inset 0 0 0 1.5px var(--muted)}
+.btn[hidden]{display:none}
+.glance{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px 26px;box-shadow:var(--shadow)}
+.glance h2{font-size:20px;letter-spacing:-.01em}
+.glance dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px 18px;margin:16px 0 0}
+.glance dt{color:var(--muted);font-size:14.5px;padding-top:1px}
+.glance dd{margin:0;font-size:15.5px;line-height:1.45}
+.stage{margin-top:clamp(36px,4vw,56px);padding:0 max(5vw,16px) clamp(26px,3vw,40px);background:linear-gradient(to bottom,transparent 0 30%,var(--stage) 30% 100%)}
+.shelf{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,28px)}
+.demo{display:block;text-decoration:none;color:inherit}
+.win{background:#fff;border-radius:12px;overflow:hidden;box-shadow:var(--shadow),0 0 0 1px rgba(17,19,24,.08);transition:transform .25s,box-shadow .25s}
+.demo:hover .win{transform:translateY(-4px)}
+.bar{display:flex;align-items:center;gap:6px;padding:9px 12px;background:#eef0f6;color:#545869;font-size:12.5px}
+.bar i{width:9px;height:9px;border-radius:50%;background:#d3d6e2;flex:none}
+.bar span{margin-left:8px;background:#fff;border-radius:6px;padding:2px 10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
+.bar b{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:#15803d;white-space:nowrap}
+.bar b::before{content:"";width:7px;height:7px;border-radius:50%;background:#22c55e}
+.scr{aspect-ratio:16/9;background:#e9ebf5;position:relative}
+.scr video,.scr svg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.go{position:absolute;right:12px;bottom:12px;background:rgba(17,19,24,.88);color:#fff;border-radius:999px;padding:7px 14px;font-weight:600;font-size:13.5px;opacity:0;transform:translateY(4px);transition:opacity .2s,transform .2s}
+.demo:hover .go,.demo:focus-visible .go{opacity:1;transform:none}
+@media(hover:none){.go{opacity:1;transform:none}}
+.cap{display:flex;justify-content:space-between;gap:10px;padding:12px 4px 0;font-size:14.5px;color:var(--muted)}
+.cap b{color:var(--ink);font-weight:600}
+.sec h2{font-size:clamp(32px,4vw,46px)}
+.intro{color:var(--muted);font-size:18px;max-width:42em;margin:14px 0 0}
+.proj{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);grid-template-areas:"media head" "media body";column-gap:clamp(28px,4vw,64px);align-items:center;padding-block:clamp(36px,5vw,64px);border-top:1px solid var(--line)}
+.proj:first-of-type{border-top:0}
+.proj.flip{grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);grid-template-areas:"head media" "body media"}
+.proj .media{grid-area:media}
+.proj .head{grid-area:head;align-self:end}
+.proj .body{grid-area:body;align-self:start}
+.kick{color:var(--link);font-weight:600;font-size:15px;margin:0 0 6px}
+.proj h3{font-size:clamp(28px,3vw,38px)}
+.pitch{font-size:18px;margin:12px 0 0}
+.pts{margin:18px 0 0;padding:0;list-style:none}
+.pts li{position:relative;padding-left:22px;margin:9px 0}
+.pts li::before{content:"";position:absolute;left:3px;top:.62em;width:7px;height:7px;border-radius:2px;background:var(--accent);transform:rotate(45deg)}
+.pts strong{font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0;padding:0;list-style:none}
+.tags li{background:var(--chip);border-radius:8px;padding:3px 10px;font-size:13.5px;font-weight:600;color:var(--muted)}
+.acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.how{color:var(--muted);font-size:14.5px;margin:12px 0 0}
+.how b{color:var(--ink);font-weight:600}
+.note{color:var(--muted);font-size:14.5px;margin:14px 0 0;padding-left:12px;border-left:3px solid var(--line)}
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.about p{font-size:17px;margin:16px 0 0;max-width:36em}
+.time{list-style:none;margin:26px 0 0;padding:0;border-left:2px solid var(--line)}
+.time li{position:relative;padding:0 0 16px 22px}
+.time li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.time li:last-child{padding-bottom:0}
+.time li:last-child::before{background:var(--accent)}
+.time b{display:block;font-size:14px;color:var(--link);white-space:nowrap}
+.why{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.why li{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.why b{display:block;font-family:"Inter Display",Inter,sans-serif;font-size:19px}
+.why li>span{color:var(--muted);font-size:15.5px}
+.skills{margin-top:22px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:9px 18px}
+.skills dt{font-weight:600;font-size:15px;white-space:nowrap}
+.skills dd{margin:0;font-size:15px;color:var(--muted)}
+.cta{background:var(--accent);color:#fff;border-radius:28px;padding:clamp(28px,5vw,64px)}
+.cta h2{font-size:clamp(34px,4.6vw,56px)}
+.cta p{color:#dfe3ff;font-size:18px;margin:12px 0 0;max-width:36em}
+.cgrid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start;margin-top:28px}
+.mail{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.mail a{color:#fff;font-size:clamp(20px,2.4vw,28px);font-weight:600;overflow-wrap:anywhere}
+.copy{all:unset;cursor:pointer;border:1.5px solid rgba(255,255,255,.55);border-radius:10px;padding:8px 14px;font-weight:600;font-size:14px}
+.clist{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.clist a{color:#fff;text-decoration:none;font-weight:600}
+.clist small{display:block;color:#c9cfff;font-size:13.5px}
+.cv{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:26px;padding-top:22px;border-top:1px solid rgba(255,255,255,.25);color:#dfe3ff;font-size:15.5px}
+.cv .btn{background:#fff;color:var(--accent)}
+.cta a:focus-visible,.cta button:focus-visible{outline-color:#fff}
+footer{padding:0 max(5vw,16px) 28px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:18px}
+footer p{margin:0;max-width:52em}
+@media(max-width:1000px){.cap span{display:none}}
+@media(max-width:900px){.top,.about,.cgrid{grid-template-columns:minmax(0,1fr)}.proj,.proj.flip{grid-template-columns:minmax(0,1fr);grid-template-areas:"head" "media" "body"}.proj .media{margin-top:20px}.nav nav{display:none}}
+@media(max-width:700px){.stage{background:linear-gradient(to bottom,transparent 0 22%,var(--stage) 22% 100%)}.shelf{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:calc(-1*max(5vw,16px));padding:0 max(5vw,16px) 6px;scrollbar-width:none}.shelf .demo{flex:0 0 82%;scroll-snap-align:center}.who img{width:76px;height:76px}.cap span{display:inline}.glance{padding:20px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <a class="me" href="#top">Sami Khaleel</a>
+  <nav aria-label="Menü">
+    <a href="#projekte"><span class="de">Projekte</span><span class="en">Projects</span></a>
+    <a href="#ueber-mich"><span class="de">Über mich</span><span class="en">About</span></a>
+    <a href="#kontakt"><span class="de">Kontakt</span><span class="en">Contact</span></a>
+  </nav>
+  <div class="lang" role="group" aria-label="Sprache / Language">
+    <button id="lang-de" type="button" aria-pressed="true">DE</button>
+    <button id="lang-en" type="button" aria-pressed="false">EN</button>
+  </div>
+  <button class="mode" id="mode" type="button" aria-label="Hell oder dunkel / Light or dark">
+    <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+  </button>
+</header>
+
+<section class="hero" id="top">
+  <div class="band">
+    <div class="wrap top">
+      <div>
+        <span class="avail"><span class="de">Ab sofort verfügbar</span><span class="en">Available now</span></span>
+        <div class="who">
+          <img src="assets/sami.jpg" alt="Sami Khaleel" width="96" height="96">
+          <div>
+            <h1>Sami Khaleel</h1>
+            <p class="role"><span class="de">Webentwickler · JavaScript, React, Node.js</span><span class="en">Web developer · JavaScript, React, Node.js</span></p>
+          </div>
+        </div>
+        <p class="lead"><span class="de"><strong>Ich suche eine Stelle als Webentwickler</strong>, als Junior oder im Praktikum. Meine Projekte können Sie direkt im Browser ausprobieren: Drei Web-Apps laufen live, eine Erweiterung ist im Chrome Web Store.</span><span class="en"><strong>I'm looking for a job as a web developer</strong>, as a junior or an intern. You can try my projects right in your browser: three web apps are live, and one extension is on the Chrome Web Store.</span></p>
+        <div class="ctas">
+          <a class="btn p" href="#projekte"><span class="de">Projekte ansehen</span><span class="en">See the projects</span> ↓</a>
+          <a class="btn s" href="#kontakt"><span class="de">Kontakt aufnehmen</span><span class="en">Get in touch</span></a>
+          <a class="btn s cvlink" href="assets/Lebenslauf-Sami-Khaleel.pdf" target="_blank" rel="noopener" hidden><span class="de">Lebenslauf (PDF)</span><span class="en">CV (PDF)</span></a>
+        </div>
+      </div>
+      <aside class="glance">
+        <h2><span class="de">Auf einen Blick</span><span class="en">At a glance</span></h2>
+        <dl>
+          <dt><span class="de">Ort</span><span class="en">Location</span></dt>
+          <dd><span class="de">Jülich (NRW). Gern Aachen, Köln oder Bonn; umzugsbereit</span><span class="en">Jülich (NRW). Aachen, Cologne or Bonn preferred; open to relocating</span></dd>
+          <dt><span class="de">Abschluss</span><span class="en">Degree</span></dt>
+          <dd>Bachelor of Engineering, Computer Engineering (2023)</dd>
+          <dt><span class="de">Sprachen</span><span class="en">Languages</span></dt>
+          <dd><span class="de">Deutsch B2 (ÖSD), Englisch C1, Arabisch</span><span class="en">German B2 (ÖSD), English C1, Arabic (native)</span></dd>
+          <dt><span class="de">Aufenthalt</span><span class="en">Residence</span></dt>
+          <dd><span class="de">Chancenkarte, ich lebe bereits in Deutschland. Kein Visum aus dem Ausland nötig.</span><span class="en">Opportunity Card (Chancenkarte), already living in Germany. No visa from abroad needed.</span></dd>
+        </dl>
+      </aside>
+    </div>
+  </div>
+
+  <div class="stage">
+    <div class="wrap shelf">
+      <a class="demo" href="https://teach-me-al46.onrender.com/home" target="_blank" rel="noopener">
+        <div class="win"><div class="bar"><i></i><i></i><i></i><span>teach-me-al46.onrender.com</span><b>Live</b></div>
+          <div class="scr"><video muted loop playsinline preload="none" poster="assets/teachme.jpg"><source src="assets/teachme.mp4" type="video/mp4"></video><span class="go"><span class="de">Live-Demo öffnen ↗</span><span class="en">Open live demo ↗</span></span></div></div>
+        <div class="cap"><b>TeachMe</b><span class="de">Live-Unterricht</span><span class="en">Live classes</span></div>
+      </a>
+      <a class="demo" href="https://upswing-ulju.onrender.com/" target="_blank" rel="noopener">
+        <div class="win"><div class="bar"><i></i><i></i><i></i><span>upswing-ulju.onrender.com</span><b>Live</b></div>
+          <div class="scr"><video muted loop playsinline preload="none" poster="assets/upswing.jpg"><source src="assets/upswing.mp4" type="video/mp4"></video><span class="go"><span class="de">Live-Demo öffnen ↗</span><span class="en">Open live demo ↗</span></span></div></div>
+        <div class="cap"><b>Upswing</b><span class="de">Soziales Netzwerk</span><span class="en">Social network</span></div>
+      </a>
+      <a class="demo" href="https://chromewebstore.google.com/detail/learn-languages-youtube-d/icbikjpimmfhofelddlfabbhpaombepm" target="_blank" rel="noopener">
+        <div class="win"><div class="bar"><i></i><i></i><i></i><span>chromewebstore.google.com</span><b>Live</b></div>
+          <div class="scr"><video muted loop playsinline preload="none" poster="assets/trainer.jpg"><source src="assets/trainer.mp4" type="video/mp4"></video><span class="go"><span class="de">Im Store öffnen ↗</span><span class="en">Open in the store ↗</span></span></div></div>
+        <div class="cap"><b>Language Sentence Trainer</b><span class="de">Chrome-Erweiterung</span><span class="en">Chrome extension</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<main>
+<section class="band sec" id="projekte">
+  <div class="wrap">
+    <h2><span class="de">Nicht lesen, ausprobieren.</span><span class="en">Don't just read. Try it.</span></h2>
+    <p class="intro"><span class="de">Ein Klick auf ein Projekt öffnet die Live-Demo, ohne Anmeldung. Die Demos laufen auf kostenlosem Hosting, der erste Start kann bis zu einer Minute dauern.</span><span class="en">Click a project to open its live demo, no sign-up. The demos run on free hosting, so the first start can take up to a minute.</span></p>
+
+    <article class="proj" id="teachme">
+      <a class="demo media" href="https://teach-me-al46.onrender.com/home" target="_blank" rel="noopener">
+        <div class="win"><div class="bar"><i></i><i></i><i></i><span>teach-me-al46.onrender.com</span><b>Live</b></div>
+          <div class="scr"><video class="auto" muted loop playsinline preload="none" poster="assets/teachme.jpg"><source src="assets/teachme.mp4" type="video/mp4"></video><span class="go"><span class="de">Live-Demo öffnen ↗</span><span class="en">Open live demo ↗</span></span></div></div></a>
+      <div class="head">
+        <p class="kick"><span class="de">Live-Unterricht im Browser</span><span class="en">Live classes in the browser</span></p>
+        <h3>TeachMe</h3>
+        <p class="pitch"><span class="de">Eine Lehrkraft startet eine Videostunde, Schüler treten im Browser bei, und die Lehrkraft behält die Kontrolle.</span><span class="en">A teacher starts a video lesson, students join from the browser, and the teacher stays in control.</span></p>
+      </div>
+      <div class="body">
+        <ul class="pts">
+          <li><span class="de"><strong>Das Knifflige:</strong> ICE-Kandidaten, die zu früh ankommen, werden zwischengespeichert. Das verhindert einen typischen WebRTC-Fehler.</span><span class="en"><strong>The tricky part:</strong> ICE candidates that arrive too early are queued, which avoids a classic WebRTC race.</span></li>
+          <li><span class="de">Video läuft direkt zwischen den Browsern (WebRTC), der Server vermittelt nur über Socket.IO.</span><span class="en">Video flows directly between browsers (WebRTC); the server only introduces them over Socket.IO.</span></li>
+          <li><span class="de">Stummschalten, Video stoppen und Entfernen prüft der Server, nicht nur die Oberfläche.</span><span class="en">Mute, stop video and remove are enforced on the server, not just in the UI.</span></li>
+        </ul>
+        <ul class="tags"><li>React</li><li>Node.js</li><li>Express</li><li>WebRTC</li><li>Socket.IO</li><li>MySQL</li><li>MongoDB</li></ul>
+        <div class="acts">
+          <a class="btn p" href="https://teach-me-al46.onrender.com/home" target="_blank" rel="noopener"><span class="de">Live-Demo öffnen</span><span class="en">Open live demo</span> ↗</a>
+          <a class="btn s" href="https://github.com/sami000khaleel/teach-me/tree/deployment" target="_blank" rel="noopener">Code</a>
+        </div>
+        <p class="how"><span class="de"><b>So geht's:</b> „Try a demo video call“ klicken, dann die Seite in einem privaten Fenster öffnen und als Schüler beitreten.</span><span class="en"><b>How:</b> click “Try a demo video call”, then open the site in a private window and join as a student.</span></p>
+      </div>
+    </article>
+
+    <article class="proj flip" id="upswing">
+      <a class="demo media" href="https://upswing-ulju.onrender.com/" target="_blank" rel="noopener">
+        <div class="win"><div class="bar"><i></i><i></i><i></i><span>upswing-ulju.onrender.com</span><b>Live</b></div>
+          <div class="scr"><video class="auto" muted loop playsinline preload="none" poster="assets/upswing.jpg"><source src="assets/upswing.mp4" type="video/mp4"></video><span class="go"><span class="de">Live-Demo öffnen ↗</span><span class="en">Open live demo ↗</span></span></div></div></a>
+      <div class="head">
+        <p class="kick"><span class="de">Soziales Netzwerk mit erklärtem Feed</span><span class="en">A social network whose feed explains itself</span></p>
+        <h3>Upswing</h3>
+        <p class="pitch"><span class="de">Posts, Kommentare, Communities und Live-Chat. Der Feed zeigt mehr von dem, wofür man sich gerade zu interessieren beginnt, und erklärt jede Auswahl.</span><span class="en">Posts, comments, communities and live chat. The feed shows more of what you are getting into right now, and explains every choice.</span></p>
+      </div>
+      <div class="body">
+        <ul class="pts">
+          <li><span class="de"><strong>Das Knifflige:</strong> Der Feed misst, wie schnell jedes Interesse wächst (über 7 Tage und 30 Minuten), nicht nur wie groß es ist.</span><span class="en"><strong>The tricky part:</strong> the feed measures how fast each interest grows (over 7 days and 30 minutes), not only how big it is.</span></li>
+          <li><span class="de">REST-API mit rund 80 Endpunkten, JWT und Rollen für Community-Admins.</span><span class="en">REST API with about 80 endpoints, JWT and roles for community admins.</span></li>
+          <li><span class="de">Nachrichten, Benachrichtigungen und Online-Status live über Socket.IO.</span><span class="en">Messages, notifications and presence live over Socket.IO.</span></li>
+        </ul>
+        <ul class="tags"><li>Node.js</li><li>Express</li><li>MongoDB</li><li>Socket.IO</li><li>React</li></ul>
+        <p class="note"><span class="de">Backend und Algorithmus waren mein erstes Projekt. Das React-Frontend kam später mit Claude als Pair-Programmer dazu; das README nennt jede Änderung.</span><span class="en">The backend and algorithm were my first project. The React front end came later, with Claude as a pair programmer; the README lists every change.</span></p>
+        <div class="acts">
+          <a class="btn p" href="https://upswing-ulju.onrender.com/" target="_blank" rel="noopener"><span class="de">Live-Demo öffnen</span><span class="en">Open live demo</span> ↗</a>
+          <a class="btn s" href="https://github.com/sami000khaleel/social-media-application" target="_blank" rel="noopener">Code</a>
+        </div>
+        <p class="how"><span class="de"><b>So geht's:</b> unter dem Login „Lena Hoffmann“ anklicken, „How it works“ öffnen und drei Beiträge liken.</span><span class="en"><b>How:</b> click “Lena Hoffmann” under the sign-in form, open “How it works” and like three posts.</span></p>
+      </div>
+    </article>
+
+    <article class="proj" id="trainer">
+      <a class="demo media" href="https://chromewebstore.google.com/detail/learn-languages-youtube-d/icbikjpimmfhofelddlfabbhpaombepm" target="_blank" rel="noopener">
+        <div class="win"><div class="bar"><i></i><i></i><i></i><span>chromewebstore.google.com</span><b>Live</b></div>
+          <div class="scr"><video class="auto" muted loop playsinline preload="none" poster="assets/trainer.jpg"><source src="assets/trainer.mp4" type="video/mp4"></video><span class="go"><span class="de">Im Store öffnen ↗</span><span class="en">Open in the store ↗</span></span></div></div></a>
+      <div class="head">
+        <p class="kick"><span class="de">Chrome-Erweiterung im Chrome Web Store</span><span class="en">Chrome extension on the Chrome Web Store</span></p>
+        <h3>Language Sentence Trainer</h3>
+        <p class="pitch"><span class="de">Macht aus jedem YouTube-Video mit Untertiteln eine Sprachstunde. Ich habe sie gebaut, weil ich selbst so Deutsch lerne.</span><span class="en">Turns any YouTube video with captions into a language lesson. I built it because that is how I learn German myself.</span></p>
+      </div>
+      <div class="body">
+        <ul class="pts">
+          <li><span class="de"><strong>Das Knifflige:</strong> Zerhackte Auto-Untertitel werden zu ganzen Sätzen, zeitlich passend zu den gesprochenen Wörtern.</span><span class="en"><strong>The tricky part:</strong> choppy auto-captions become whole sentences, timed to the spoken words.</span></li>
+          <li><span class="de">Fünf Lernspiele, schwere Wörter kommen öfter. 47 Sprachen, auch von rechts nach links.</span><span class="en">Five games, and hard words come up more often. 47 languages, right-to-left included.</span></li>
+          <li><span class="de">Reines JavaScript ohne Abhängigkeiten, die Logik ist mit Tests abgesichert.</span><span class="en">Plain JavaScript with no dependencies; the logic is covered by tests.</span></li>
+        </ul>
+        <ul class="tags"><li>JavaScript</li><li>Manifest V3</li><li>Intl.Segmenter</li><li>Web Speech API</li></ul>
+        <div class="acts">
+          <a class="btn p" href="https://chromewebstore.google.com/detail/learn-languages-youtube-d/icbikjpimmfhofelddlfabbhpaombepm" target="_blank" rel="noopener"><span class="de">Im Chrome Web Store</span><span class="en">On the Chrome Web Store</span> ↗</a>
+          <a class="btn s" href="https://github.com/sami000khaleel" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <p class="how"><span class="de"><b>So geht's:</b> installieren, ein YouTube-Video mit Untertiteln öffnen; W speichert den Satz, S spielt ihn noch einmal.</span><span class="en"><b>How:</b> install it, open a YouTube video with captions; W saves the sentence, S plays it again.</span></p>
+      </div>
+    </article>
+
+    <article class="proj flip" id="twosyria">
+      <a class="demo media" href="https://twosyria.onrender.com/" target="_blank" rel="noopener">
+        <div class="win"><div class="bar"><i></i><i></i><i></i><span>twosyria.onrender.com</span><b>Live</b></div>
+          <div class="scr">
+            <svg viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="640" height="360" fill="#eaf3fd"/>
+              <g transform="translate(46 50) rotate(-4)">
+                <rect width="236" height="250" rx="14" fill="#fff" stroke="#d7e3f3"/>
+                <rect x="14" y="14" width="208" height="170" rx="8" fill="#9fd0f5"/>
+                <rect x="14" y="128" width="208" height="56" fill="#e7c48d"/>
+                <path d="M40 184v-64a26 26 0 0 1 52 0v64M92 184v-64a26 26 0 0 1 52 0v64M144 184v-64a26 26 0 0 1 52 0v64" fill="#cf9f5c" stroke="#a87634" stroke-width="3"/>
+                <path d="M66 120a52 40 0 0 1 104 0z" fill="#2496e6"/><rect x="116" y="58" width="4" height="22" fill="#a87634"/>
+                <path d="M24 30v-12h12M212 30v-12h-12M24 172v12h12M212 172v12h-12" fill="none" stroke="#1d2bd8" stroke-width="4" stroke-linecap="round"/>
+                <rect x="14" y="200" width="120" height="12" rx="6" fill="#d7e3f3"/><rect x="14" y="222" width="80" height="12" rx="6" fill="#e9eff8"/>
+              </g>
+              <path d="M298 182h40" stroke="#1d2bd8" stroke-width="4" stroke-dasharray="2 10" stroke-linecap="round"/><path d="M336 172l12 10-12 10" fill="none" stroke="#1d2bd8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <g transform="translate(366 46)">
+                <rect width="236" height="268" rx="14" fill="#fff" stroke="#d7e3f3"/>
+                <path d="M14 30q60-20 110 10t98-6v220H14z" fill="#e8f1db"/><path d="M14 150q70 10 110-30t98-20" fill="none" stroke="#7cc1f2" stroke-width="8" stroke-linecap="round"/>
+                <g fill="#b9c4d6"><circle cx="70" cy="90" r="7"/><circle cx="170" cy="200" r="7"/><circle cx="60" cy="210" r="7"/></g>
+                <path d="M140 140c0-18 26-18 26 0 0 12-13 26-13 26s-13-14-13-26z" fill="#1d2bd8"/><circle cx="153" cy="140" r="5" fill="#fff"/>
+                <rect x="104" y="90" width="98" height="30" rx="8" fill="#111318"/>
+                <text class="de" x="153" y="110" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" font-weight="600" fill="#fff">Treffer</text>
+                <text class="en" x="153" y="110" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" font-weight="600" fill="#fff">Match</text>
+              </g>
+            </svg>
+            <span class="go"><span class="de">Live-Demo öffnen ↗</span><span class="en">Open live demo ↗</span></span>
+          </div></div></a>
+      <div class="head">
+        <p class="kick"><span class="de">Orte per Foto finden</span><span class="en">Find places from a photo</span></p>
+        <h3>2Syria</h3>
+        <p class="pitch"><span class="de">Ein Foto hochladen, und die App findet ähnliche Sehenswürdigkeiten in Syrien, mit Karte, Bewertungen und Filtern.</span><span class="en">Upload a photo and the app finds similar landmarks in Syria, with a map, reviews and filters.</span></p>
+      </div>
+      <div class="body">
+        <ul class="pts">
+          <li><span class="de"><strong>Das Knifflige:</strong> Bildsuche über einen eigenen Python-Dienst mit Bild-Embeddings und Kosinus-Ähnlichkeit.</span><span class="en"><strong>The tricky part:</strong> image search through a separate Python service, using image embeddings and cosine similarity.</span></li>
+          <li><span class="de">Karte mit Leaflet, Umkreissuche und Filter nach Stadt und Art des Ortes.</span><span class="en">Leaflet map with radius search and filters by city and type of place.</span></li>
+          <li><span class="de">Drei getrennte Dienste: React-Frontend, Express-API und KI-Dienst.</span><span class="en">Three separate services: React front end, Express API and AI service.</span></li>
+        </ul>
+        <ul class="tags"><li>React</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>Python</li><li>Flask</li></ul>
+        <div class="acts">
+          <a class="btn p" href="https://twosyria.onrender.com/" target="_blank" rel="noopener"><span class="de">Live-Demo öffnen</span><span class="en">Open live demo</span> ↗</a>
+          <a class="btn s" href="https://github.com/sami000khaleel/2syria/tree/deployment" target="_blank" rel="noopener">Code</a>
+        </div>
+        <p class="how"><span class="de"><b>So geht's:</b> die Suche per Foto starten und ein Bild hochladen oder aus der Galerie wählen.</span><span class="en"><b>How:</b> start a photo search and upload a picture or pick one from the gallery.</span></p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="band sec" id="ueber-mich" style="background:var(--soft)">
+  <div class="wrap about">
+    <div>
+      <h2><span class="de">Ingenieur aus Damaskus. Webentwickler aus eigenem Antrieb.</span><span class="en">Engineer by degree. Web developer by drive.</span></h2>
+      <p><span class="de">Nach meinem Studium habe ich drei Jahre lang Studierende in Mathe, Physik und Programmieren unterrichtet. Parallel habe ich Deutsch bis B2 gelernt und die Projekte auf dieser Seite gebaut, jedes von der Idee bis zur Live-Demo. Jetzt möchte ich das in einem Team weitermachen.</span><span class="en">After my degree I spent three years tutoring university students in maths, physics and programming. Alongside that I learned German to B2 and built the projects on this page, each from idea to live demo. Now I want to keep doing that in a team.</span></p>
+      <ol class="time">
+        <li><b>2018</b><span class="de">Studium Computer Engineering, Universität Damaskus</span><span class="en">Computer Engineering degree, University of Damascus</span></li>
+        <li><b>2021</b><span class="de">Erste Web-Projekte neben dem Studium, mit JavaScript, React und Node.js</span><span class="en">First web projects alongside my studies, with JavaScript, React and Node.js</span></li>
+        <li><b>2023</b><span class="de">Bachelor of Engineering nach fünf Jahren Studium</span><span class="en">Bachelor of Engineering after a five-year degree</span></li>
+        <li><b>2023–2026</b><span class="de">Nachhilfelehrer für Studierende. Daneben Deutsch bis B2 (ÖSD) gelernt und meine Projekte fertig gebaut und online gestellt</span><span class="en">Tutor for university students. Alongside that: learned German to B2 (ÖSD), and finished and launched my projects</span></li>
+        <li><b><span class="de">Heute</span><span class="en">Today</span></b><span class="de">In Jülich, bereit für meine erste Stelle als Webentwickler</span><span class="en">In Jülich, ready for my first job as a web developer</span></li>
+      </ol>
+    </div>
+    <div>
+      <ul class="why">
+        <li><b><span class="de">Ich bringe Dinge zu Ende.</span><span class="en">I finish what I start.</span></b><span class="de">Vier Projekte sind online, eines davon im Chrome Web Store.</span><span class="en">Four projects are online, one of them on the Chrome Web Store.</span></li>
+        <li><b><span class="de">Ich lerne schnell.</span><span class="en">I learn fast.</span></b><span class="de">JavaScript ohne Kurs, Deutsch in zwei Jahren bis B2.</span><span class="en">JavaScript without a course, German to B2 in two years.</span></li>
+        <li><b><span class="de">Ich erkläre verständlich.</span><span class="en">I explain things clearly.</span></b><span class="de">Drei Jahre Nachhilfe in Mathe, Physik und Programmieren.</span><span class="en">Three years of tutoring in maths, physics and programming.</span></li>
+      </ul>
+      <dl class="skills">
+        <dt>Frontend</dt><dd>React, TypeScript, JavaScript, HTML, CSS, Tailwind</dd>
+        <dt>Backend</dt><dd>Node.js, Express, REST, Java (Spring Boot), Python</dd>
+        <dt><span class="de">Daten</span><span class="en">Data</span></dt><dd>MySQL, PostgreSQL, MongoDB</dd>
+        <dt><span class="de">Echtzeit</span><span class="en">Real time</span></dt><dd>WebRTC, Socket.IO</dd>
+        <dt><span class="de">Werkzeuge</span><span class="en">Tools</span></dt><dd><span class="de">Git, Bash, Render, Cloudflare R2, KI-Werkzeuge (Claude)</span><span class="en">Git, Bash, Render, Cloudflare R2, AI tools (Claude)</span></dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="kontakt">
+  <div class="wrap cta">
+    <h2><span class="de">Lassen Sie uns sprechen.</span><span class="en">Let's talk.</span></h2>
+    <p><span class="de">Ich kann sofort anfangen. Gern komme ich auch zuerst zur Probearbeit: Mit der Chancenkarte sind bis zu zwei Wochen erlaubt.</span><span class="en">I can start right away. I'm also happy to begin with a trial: the Opportunity Card allows up to two weeks of trial work.</span></p>
+    <div class="cgrid">
+      <div class="mail">
+        <a href="mailto:sami000khaleel@gmail.com">sami000khaleel@gmail.com</a>
+        <button class="copy" id="copy-mail" type="button"><span class="de">Kopieren</span><span class="en">Copy</span></button>
+      </div>
+      <ul class="clist">
+        <li><small><span class="de">Telefon</span><span class="en">Phone</span></small><a href="tel:+491791761950">+49 179 1761950</a></li>
+        <li><small>GitHub</small><a href="https://github.com/sami000khaleel" target="_blank" rel="noopener">github.com/sami000khaleel</a></li>
+        <li><small>XING</small><a href="https://www.xing.com/profile/sami_khaleel031626" target="_blank" rel="noopener">xing.com/profile/sami_khaleel031626</a></li>
+      </ul>
+    </div>
+    <div class="cv">
+      <span class="de">Lebenslauf und Zeugnisse sende ich Ihnen gern per E-Mail.</span><span class="en">I'm happy to email you my CV and certificates.</span>
+      <a class="btn cvlink" href="assets/Lebenslauf-Sami-Khaleel.pdf" target="_blank" rel="noopener" hidden><span class="de">Lebenslauf (PDF)</span><span class="en">CV (PDF)</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Sami Khaleel · Jülich</span>
+    <p><span class="de">Datenschutz: keine Cookies, keine Tracker, keine fremden Schriften. Beim Öffnen weckt Ihr Browser die Demo-Server bei Render, damit die Demos schneller starten.</span><span class="en">Privacy: no cookies, no trackers, no third-party fonts. When the page opens, your browser wakes the demo servers on Render so the demos start faster.</span></p>
+  </div>
+</footer>
+
+<script>
+{
+  const root = document.documentElement;
+  const store = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
+
+  const setLang = l => {
+    root.lang = l;
+    document.getElementById('lang-de').setAttribute('aria-pressed', String(l === 'de'));
+    document.getElementById('lang-en').setAttribute('aria-pressed', String(l === 'en'));
+  };
+  setLang(root.lang === 'en' ? 'en' : 'de');
+  document.getElementById('lang-de').addEventListener('click', () => { setLang('de'); store('lang', 'de'); });
+  document.getElementById('lang-en').addEventListener('click', () => { setLang('en'); store('lang', 'en'); });
+
+  document.getElementById('mode').addEventListener('click', () => {
+    const m = root.dataset.mode === 'dark' ? 'light' : 'dark';
+    root.dataset.mode = m;
+    store('mode', m);
+  });
+
+  const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Shelf: a demo plays only while the mouse rests on it.
+  if (!calm && matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.querySelectorAll('.shelf .demo').forEach(a => {
+      const v = a.querySelector('video');
+      a.addEventListener('pointerenter', () => { v.preload = 'auto'; v.play().catch(() => {}); });
+      a.addEventListener('pointerleave', () => { v.pause(); });
+    });
+  }
+
+  // Projects: the video you are looking at plays, the others stay paused.
+  const autos = [...document.querySelectorAll('video.auto')];
+  if (!calm) {
+    const seen = new Map();
+    const pick = () => {
+      let best = null, bestR = 0.55;
+      seen.forEach((r, v) => { if (r > bestR) { best = v; bestR = r; } });
+      autos.forEach(v => { if (v !== best) v.pause(); });
+      if (best && best.paused) { best.preload = 'auto'; best.play().catch(() => {}); }
+    };
+    const vio = new IntersectionObserver(es => { es.forEach(e => seen.set(e.target, e.intersectionRatio)); pick(); }, {threshold: [0, .3, .55, .8, 1]});
+    autos.forEach(v => vio.observe(v));
+  }
+
+  // E-mail copy.
+  const btn = document.getElementById('copy-mail');
+  btn.addEventListener('click', async () => {
+    const de = root.lang === 'de';
+    try { await navigator.clipboard.writeText('sami000khaleel@gmail.com'); btn.textContent = de ? 'Kopiert ✓' : 'Copied ✓'; }
+    catch (e) { btn.textContent = de ? 'Bitte markieren' : 'Please select it'; }
+    setTimeout(() => { btn.innerHTML = '<span class="de">Kopieren</span><span class="en">Copy</span>'; }, 2200);
+  });
+
+  // CV buttons appear once assets/Lebenslauf-Sami-Khaleel.pdf exists.
+  fetch('assets/Lebenslauf-Sami-Khaleel.pdf', {method: 'HEAD'})
+    .then(r => { if (r.ok) document.querySelectorAll('.cvlink').forEach(a => { a.hidden = false; }); })
+    .catch(() => {});
+
+  // Wake the free Render servers so a recruiter's first click is fast.
+  const save = navigator.connection && navigator.connection.saveData;
+  if (!save && /^https?:$/.test(location.protocol)) {
+    setTimeout(() => {
+      ['https://teach-me-al46.onrender.com/home', 'https://upswing-ulju.onrender.com/', 'https://twosyria.onrender.com/']
+        .forEach(u => fetch(u, {mode: 'no-cors', cache: 'no-store'}).catch(() => {}));
+    }, 1500);
+  }
+}
+</script>
+</body>
+</html>
